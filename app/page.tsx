@@ -2,7 +2,6 @@ import { profileQuery } from "@/lib/sanity.query";
 import type { ProfileType } from "@/lib/index";
 import HeroSvg from "./assets/icons/HeroSvg";
 
-import { Slide } from "./animation/Slide";
 import { sanityFetch } from "@/lib/sanity.client";
 
 
@@ -16,6 +15,7 @@ export default async function Home() {
 
   return (
     <main className="max-w-7xl mx-auto md:px-16 px-6 lg:mt-32 mt-20">
+      
       {/* <section className="flex xl:flex-row flex-col xl:items-center items-start xl:justify-center justify-between gap-x-12 mb-16">
         {profile &&
           profile.map((data) => (
