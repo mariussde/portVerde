@@ -20,7 +20,7 @@ const options = {
     "Marius Lefter is a Software Engineer who is passionate about building a better future",
   url: "https://mariuslefter.com",
   ogImage:
-    "public/logo.svg",
+    "public/favicon.ico",
 };
 
 export const metadata: Metadata = {

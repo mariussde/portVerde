@@ -1,11 +1,10 @@
 import { profileQuery } from "@/lib/sanity.query";
-import type { ProfileType } from "@/types";
+import type { ProfileType } from "@/lib/index";
 import HeroSvg from "./assets/icons/HeroSvg";
-import Job from "./components/pages/Job";
-import Social from "./components/shared/Social";
+
 import { Slide } from "./animation/Slide";
 import { sanityFetch } from "@/lib/sanity.client";
-import ContributionGraph from "./components/pages/GithubCalendarComponent";
+
 
 import Hero from "./components/Hero";
 
