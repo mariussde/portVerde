@@ -7,6 +7,8 @@ import { Slide } from "./animation/Slide";
 import { sanityFetch } from "@/lib/sanity.client";
 import ContributionGraph from "./components/pages/GithubCalendarComponent";
 
+import Hero from "./components/Hero";
+
 export default async function Home() {
   const profile: ProfileType[] = await sanityFetch({
     query: profileQuery,
@@ -15,7 +17,7 @@ export default async function Home() {
 
   return (
     <main className="max-w-7xl mx-auto md:px-16 px-6 lg:mt-32 mt-20">
-      <section className="flex xl:flex-row flex-col xl:items-center items-start xl:justify-center justify-between gap-x-12 mb-16">
+      {/* <section className="flex xl:flex-row flex-col xl:items-center items-start xl:justify-center justify-between gap-x-12 mb-16">
         {profile &&
           profile.map((data) => (
             <div key={data._id} className="lg:max-w-2xl max-w-2xl">
@@ -37,7 +39,8 @@ export default async function Home() {
         </Slide>
       </section>
       <ContributionGraph />
-      <Job />
+      <Job /> */}
+      <Hero />
     </main>
   );
 }

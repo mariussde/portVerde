@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "@/public/logo.png";
+import Logo from "@/public/logo.svg";
 import Theme from "./Theme";
 import UnmountStudio from "./Unmount";
 import MobileMenu from "./MobileMenu";
@@ -8,20 +8,16 @@ import MobileMenu from "./MobileMenu";
 export default function Navbar() {
   const data = [
     {
-      title: "About",
-      href: "/about",
+      title: "LinkedIn",
+      href: "/linkedin",
     },
     {
-      title: "Projects",
-      href: "/projects",
+      title: "Copy email",
+      href: "/email",
     },
     {
-      title: "Blog",
-      href: "/blog",
-    },
-    {
-      title: "Photos",
-      href: "/photos",
+      title: "Read.cv",
+      href: "/readcv",
     },
   ];
 
@@ -33,13 +29,13 @@ export default function Navbar() {
             <Image src={Logo} width={35} height={35} alt="logo" />
           </Link>
 
-          <nav className="md:block hidden">
-            <ul className="flex items-center gap-x-8">
+          <nav className="md:block hidden flex-grow">
+            <ul className="flex items-center justify-end gap-x-8">
               {data.map((link, id) => (
-                <li key={id}>
+                <li key={id} className={id === data.length - 1 ? 'mr-8' : ''}> {/* Add margin to the last link */}
                   <Link
                     href={link.href}
-                    className="font-incognito dark:text-white text-zinc-600 dark:hover:text-primary-color hover:text-zinc-900 duration-300 text-base"
+                    className="font-incognito dark:text-[#E4E4DC] text-zinc-600 dark:hover:text-[#999994] hover:text-zinc-900 duration-300 text-base flex items-center"
                   >
                     {link.title}
                   </Link>

@@ -15,12 +15,12 @@ const inter = Inter({
 });
 
 const options = {
-  title: "Victor Eke | Software Developer",
+  title: "Marius Lefter | Software Engineer",
   description:
-    "Victor Eke is a Software Developer and Technical Writer who is passionate about building solutions and contributing to open source communities",
-  url: "https://victoreke.com",
+    "Marius Lefter is a Software Engineer who is passionate about building a better future",
+  url: "https://mariuslefter.com",
   ogImage:
-    "https://res.cloudinary.com/victoreke/image/upload/v1692635746/victoreke/og.png",
+    "public/logo.svg",
 };
 
 export const metadata: Metadata = {
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: options.title,
     url: options.url,
-    siteName: "victoreke.com",
+    siteName: "mariuslefter.com",
     locale: "en-US",
     type: "website",
     description: options.description,
@@ -52,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${incognito.variable} ${inter.className} ${gitlabmono.variable} dark:bg-zinc-900 bg-white dark:text-white text-zinc-700`}
+        className={`${incognito.variable} ${inter.className} ${gitlabmono.variable} light-mode dark:bg-zinc-900 dark:text-[#E4E4DC] text-zinc-700`}
       >
         <Providers>
           <Navbar />
